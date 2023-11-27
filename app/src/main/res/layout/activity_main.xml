@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="20dp"
+        android:text="ACTUAL PRICE"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewVAT"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="ITEM"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="64dp"
+        android:text="PRICE"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewItem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewVAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="64dp"
+        android:text="VAT 16%"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewPrice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="MILK"
+        app:layout_constraintBottom_toTopOf="@+id/btnSugar"
+        app:layout_constraintEnd_toEndOf="@+id/textViewItem"
+        app:layout_constraintStart_toStartOf="@+id/textViewItem" />
+
+    <Button
+        android:id="@+id/btnSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="SUGAR"
+        app:layout_constraintBottom_toTopOf="@+id/btnFlour"
+        app:layout_constraintStart_toStartOf="@+id/btnMilk" />
+
+    <Button
+        android:id="@+id/btnFlour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="FLOUR"
+        app:layout_constraintBottom_toTopOf="@+id/btnBread"
+        app:layout_constraintEnd_toEndOf="@+id/btnSugar"
+        app:layout_constraintStart_toStartOf="@+id/btnSugar" />
+
+    <Button
+        android:id="@+id/btnBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="BREAD"
+        app:layout_constraintBottom_toTopOf="@+id/btnGrandTotal"
+        app:layout_constraintEnd_toEndOf="@+id/btnFlour"
+        app:layout_constraintStart_toStartOf="@+id/btnFlour" />
+
+    <Button
+        android:id="@+id/btnGrandTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="28dp"
+        android:text="GRAND TOTAL"
+        app:layout_constraintBottom_toTopOf="@+id/btnDiscount"
+        app:layout_constraintEnd_toEndOf="@+id/btnBread"
+        app:layout_constraintStart_toStartOf="@+id/btnBread" />
+
+    <Button
+        android:id="@+id/btnDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="DISCOUNT 15%"
+        app:layout_constraintBottom_toTopOf="@+id/btnNetPay"
+        app:layout_constraintEnd_toEndOf="@+id/btnGrandTotal"
+        app:layout_constraintStart_toStartOf="@+id/btnGrandTotal" />
+
+    <Button
+        android:id="@+id/btnNetPay"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="150dp"
+        android:text="NET PAY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnDiscount"
+        app:layout_constraintStart_toStartOf="@+id/btnDiscount" />
+
+    <TextView
+        android:id="@+id/priceMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/priceSugar"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPrice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewPrice" />
+
+    <TextView
+        android:id="@+id/vatMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/vatSugar"
+        app:layout_constraintEnd_toEndOf="@+id/textViewVAT"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewVAT" />
+
+    <TextView
+        android:id="@+id/actualPriceMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/actualPriceSugar"
+        app:layout_constraintEnd_toEndOf="@+id/textViewActual"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="@+id/textViewActual" />
+
+    <TextView
+        android:id="@+id/priceSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/priceFlour"
+        app:layout_constraintEnd_toEndOf="@+id/priceMilk"
+        app:layout_constraintStart_toStartOf="@+id/priceMilk" />
+
+    <TextView
+        android:id="@+id/vatSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/vatFlour"
+        app:layout_constraintEnd_toEndOf="@+id/vatMilk"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vatMilk" />
+
+    <TextView
+        android:id="@+id/actualPriceSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/actualPriceFlour"
+        app:layout_constraintEnd_toEndOf="@+id/actualPriceMilk"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/actualPriceMilk" />
+
+    <TextView
+        android:id="@+id/priceFlour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/priceBread"
+        app:layout_constraintEnd_toEndOf="@+id/priceSugar"
+        app:layout_constraintStart_toStartOf="@+id/priceSugar" />
+
+    <TextView
+        android:id="@+id/vatFlour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/vatBread"
+        app:layout_constraintEnd_toEndOf="@+id/vatSugar"
+        app:layout_constraintStart_toStartOf="@+id/vatSugar" />
+
+    <TextView
+        android:id="@+id/actualPriceFlour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/actualPriceBread"
+        app:layout_constraintEnd_toEndOf="@+id/actualPriceSugar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/actualPriceSugar" />
+
+    <TextView
+        android:id="@+id/priceBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/btnGrandTotal"
+        app:layout_constraintEnd_toEndOf="@+id/priceFlour"
+        app:layout_constraintStart_toStartOf="@+id/priceFlour" />
+
+    <TextView
+        android:id="@+id/vatBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="404dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/vatFlour"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vatFlour" />
+
+    <TextView
+        android:id="@+id/actualPriceBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="404dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/actualPriceFlour"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/actualPriceFlour" />
+
+    <TextView
+        android:id="@+id/grandTotal"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="35dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/discount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnGrandTotal"
+        app:layout_constraintTop_toBottomOf="@+id/vatBread" />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="35dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/netPay"
+        app:layout_constraintEnd_toEndOf="@+id/grandTotal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/grandTotal" />
+
+    <TextView
+        android:id="@+id/netPay"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="150dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/discount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/discount" />
+</androidx.constraintlayout.widget.ConstraintLayout>
